@@ -32,8 +32,8 @@ module.exports.run = async function ({ api, event, args }) {
         const bundat = await axios.get(`https://betadash-api-swordslush.vercel.app/aidetect?text=${encodeURIComponent(humanizedText)}`);
         
         const mes = bundat.data.message;
-        const isHuman = bundat.data.isHuman;
-        const aiWords = bundat.data.aiWords;
+        const isHuman = bundat.data.data.isHuman;
+        const aiWords = bundat.data.data.aiWords;
 
 
 
